@@ -36,6 +36,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "bootstrap": "^5.2.1",
     "dotenv": "^16.0.2",

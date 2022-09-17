@@ -1,0 +1,50 @@
+.img-thumbnail {
+    max-width: 500px;
+    max-height: 400px;
+    /* height of container */
+    /* object-fit: cover; */
+    border-radius: 5px;
+    margin: 20px;
+}
+
+img {
+    max-width: 700px;
+    max-height: 1000px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+body {
+    /* background: url('https://wsemoboi.ru/image/catalog/tkani/katalog-tkaney/romo/parada/210236_angliyskaya-tkan-romo-kollektsiya-parada-artikul-7762-05.jpg') repeat; */
+    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612278069_137-p-kartinki-tsvetov-na-fioletovom-fone-171.jpg') repeat;    
+    background-size: 100%
+}
+
+h1 {
+    margin: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 90px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+h2 {
+    margin: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+h3 {
+    margin: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+}
