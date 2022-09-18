@@ -7,7 +7,6 @@ export default function MemeItem() {
   const [result, setResult] = useState(false);
   const { memId } = useParams();
   const meme = hardCodeMemes.find((item) => item.id === memId);
-  console.log(meme);
   const navigate = useNavigate();
   const clickHandler = () => {
     navigate('/');
@@ -30,7 +29,7 @@ export default function MemeItem() {
         text1: input.text2,
       }),
     })
-      .then((res) => res.json()).then((data) => { console.log(data); setResult(data); });
+      .then((res) => res.json()).then((data) => setResult(data));
   };
 
   return (

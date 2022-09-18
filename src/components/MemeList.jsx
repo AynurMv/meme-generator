@@ -19,17 +19,19 @@ export default function MemeList() {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <h1>Yo, choose A meme</h1>
       </div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div style={{
+        display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center',
+      }}
+      >
         {memes && memes.map((el) => (
-          <>
+          <div key={el.id}>
             <img
               src={el.url}
-              key={el.id}
               className="img-thumbnail"
               onClick={() => clickHandler(el.id)}
               alt="..."
             />
-          </>
+          </div>
         ))}
       </div>
     </>
