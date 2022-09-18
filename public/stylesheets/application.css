@@ -5,6 +5,12 @@
     /* object-fit: cover; */
     border-radius: 5px;
     margin: 20px;
+    transition: 0.5s;
+}
+
+.img-thumbnail:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 img {
@@ -16,7 +22,7 @@ img {
 
 body {
     /* background: url('https://wsemoboi.ru/image/catalog/tkani/katalog-tkaney/romo/parada/210236_angliyskaya-tkan-romo-kollektsiya-parada-artikul-7762-05.jpg') repeat; */
-    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612278069_137-p-kartinki-tsvetov-na-fioletovom-fone-171.jpg') repeat;    
+    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612278069_137-p-kartinki-tsvetov-na-fioletovom-fone-171.jpg') repeat;
     background-size: 100%
 }
 
