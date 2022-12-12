@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 import hardCodeMemes from './hardCodeMemes';
 
 export default function MemeItem() {
@@ -16,20 +17,19 @@ export default function MemeItem() {
   };
 
   const emptyArrForMap = new Array(meme.box_count).fill('1');
+  const keyArr = emptyArrForMap.map((el, i) => i);
   const pushHandler = () => {
     const captions = emptyArrForMap.map((el, i) => input[`text${i + 1}`]);
-    fetch('/api/v1/meme', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({
-        templateId: memId,
-        // boxes,
-        captions,
-        text0: input.text1,
-        text1: input.text2,
-      }),
+    axios.post('/api/v1/meme', {
+      templateId: memId,
+      // boxes,
+      captions,
+      text0: input.text1,
+      text1: input.text2,
     })
-      .then((res) => res.json()).then((data) => setResult(data));
+      .then((response) => {
+        setResult(response.data);
+      });
   };
 
   return (
@@ -47,8 +47,8 @@ export default function MemeItem() {
           ) : (<img src={meme.url} style={{ padding: '10px' }} className="card-img-top" alt="..." />)}
           <div className="card-body">
             <h5 className="card-title">Write something funny</h5>
-            {emptyArrForMap.map((el, i) => (
-              <div className="input-group mb-3">
+            {keyArr.map((el, i) => (
+              <div key={el} className="input-group mb-3">
                 <div className="input-group-prepend">
                   <span className="input-group-text" id="basic-addon1">{i + 1}</span>
                 </div>

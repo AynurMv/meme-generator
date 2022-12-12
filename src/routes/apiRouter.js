@@ -1,5 +1,9 @@
 import axios from 'axios';
 import express from 'express';
+import FormData from 'form-data';
+// import fetch from 'node-fetch';
+import fetch from 'node-fetch';
+// const fetch = require('node-fetch');
 
 const router = express.Router();
 
@@ -7,6 +11,7 @@ router.post('/meme', async (req, res) => {
   const {
     templateId, captions,
   } = req.body;
+  console.log(req, templateId, captions);
   // const { text0, text1 } = req.body;
   const formData = new FormData();
   formData.append('username', 'aynur.m');
@@ -17,7 +22,8 @@ router.post('/meme', async (req, res) => {
   fetch('https://api.imgflip.com/caption_image', {
     method: 'POST',
     body: formData,
-  }).then((resp) => resp.json()).then((data) => res.json(data.data));
+  })
+    .then((resp) => resp.json()).then((data) => res.json(data.data));
 
   // const options = {
   //   url: 'https://api.imgflip.com/caption_image',
