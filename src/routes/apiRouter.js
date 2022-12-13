@@ -11,7 +11,7 @@ router.post('/meme', async (req, res) => {
   const {
     templateId, captions,
   } = req.body;
-  console.log(req, templateId, captions);
+  // console.log(req, templateId, captions);
   // const { text0, text1 } = req.body;
   const formData = new FormData();
   formData.append('username', 'aynur.m');

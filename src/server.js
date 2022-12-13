@@ -1,6 +1,6 @@
 import express from 'express';
 import path from 'path';
-import morgan from 'morgan';
+// import morgan from 'morgan';
 // import session from 'express-session';
 // import store from 'session-file-store';
 import apiRouter from './routes/apiRouter';
@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, 'components'));
 // };
 
 app.use(express.static('public'));
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use(session(sessionConfig));
